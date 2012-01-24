@@ -1,0 +1,27 @@
+{% extends "_base_layout.html" %}
+
+{% block title %}Main{% endblock %}
+
+{% block content %}
+	<div id="shorten-link-app">
+		<h1 class="hidden">Abbrevi8or - yet another app to minify your urls!</h1>
+		<form id="app-form" method="post" action="/">
+			<label id="url-label" for="url-input">your url:</label>
+			<input id="url-input" type="text" placeholder="http://your-url-that-is-2-long..." name="url"/>
+			<input id="url-submit" type="submit" value="abbrevi8*"/>
+			
+			<input id="z-indexer" value="0" type="hidden"/>
+			<input id="cache" value="" type="hidden"/>
+		</form>
+		<button id="clr-input-button" class="hidden">clr input</button>
+		<div id="alert-app-error" class="hidden"></div>
+		<div id="how-to">
+			<p class="directions"><span>* simple how-to **</span></p>
+			<p class="directions"><span>step 1:</span> copy/paste or type your long url into the text box</p>
+			<p class="directions"><span>step 1.5:</span> remember to include 'http://', 'https://' or 'ftp://'!</p>
+			<p class="directions"><span>step 2:</span> click 'abbrevi8' or hit the enter key</p>
+			<p class="directions"><span>step 3:</span> copy/paste and use your new url</p>
+		</div>
+		<div id="ajax-loader-notifier" class="hidden"></div>
+	</div>
+{% endblock %}
